@@ -1,0 +1,14 @@
+---
+- name: Deploy project-deploys
+  hosts: all
+  vars:
+    ansistrano_deploy_to: "/var/www/project-deploys"
+    ansistrano_version_dir: "releases"
+    ansistrano_current_dir: "current"
+    ansistrano_current_via: "symlink"
+    ansistrano_keep_releases: 3
+    ansistrano_deploy_via: "git"
+    ansistrano_git_repo: "git@github.com:artosalas/project-deploys.git"
+    ansistrano_git_branch: "main"
+  roles:
+    - ansistrano.deploy
