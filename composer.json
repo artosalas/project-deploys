@@ -1,0 +1,6 @@
+{
+    "name": "arturo/project-deploys",
+    "require": {
+        "vlucas/phpdotenv": "^5.0"
+    }
+}
